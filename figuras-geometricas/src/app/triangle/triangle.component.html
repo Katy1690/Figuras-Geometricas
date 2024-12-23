@@ -1,0 +1,24 @@
+<app-triangle></app-triangle>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Cálculo del Perímetro de un Triángulo Escaleno</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label>Lado 1</ion-label>
+      <ion-input [(ngModel)]="lado1" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lado 2</ion-label>
+      <ion-input [(ngModel)]="lado2" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lado 3</ion-label>
+      <ion-input [(ngModel)]="lado3" type="number"></ion-input>
+    </ion-item>
+    <ion-button (click)="calcularPerimetro()">Calcular</ion-button>
+    <div *NgIf="resultado">
+      El perímetro es: {{ resultado }} unidades.
+    </div>
+  </ion-card-content>
+</ion-card>
